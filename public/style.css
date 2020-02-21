@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    /* Respeita as bordas do box */
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Fonte */
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee8e852;
+}
+
+
+/* TITULOS */
+
+.form h2 {
+    margin-right: 35px;
+    text-align: right;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.logo {
+    max-width: 120px;
+    margin-top: 70px;
+    margin-bottom: 85px;
+}
+
+header p {
+    font-size: s;
+}
+
+header h1,
+main h2 {
+    margin-bottom: 70px;
+}
+
+main h2 span {
+    color: #fb0808ff;
+}
+
+header button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #fb0808cc;
+    border: 1px #ff4f4f solid;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ESTRUTURAS */
+
+header,
+.form,
+main {
+    /*Espaçamento com margin */
+    text-align: center;
+    margin: 0 auto 70px auto;
+    /*Limite dos elementos da página*/
+    width: 90%;
+    max-width: 500px;
+}
+
+
+/* FORM */
+
+section.form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    background-color: #fb0808cc;
+    padding: 25px;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+}
+
+form input,
+form button {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px #ffffffaa solid;
+    font-weight: bold;
+    background-color: white;
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+main .donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.donor {
+    color: black;
+}
+
+.blood {
+    color: #fb0808ff;
+    font-weight: bold;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Position absolute fica relativo a esse elemento */
+}
+
+
+/* pseudo elemento*/
+
+.blood::before {
+    content: "";
+    /* Obrigatório */
+    background-color: rgba(255, 2, 2, 0.024);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    /* Cria uma nova camada para o item , o que possibilita movimenta-lo livremente pela página*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+.donor p {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #eee;
+}
+
+
+/* Funcionalidades com javascript */
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
+
+emoji {
+    font-size: 22px;
+}
+
+emoji.pensiveFace.hide {
+    display: none;
+}
+
+emoji.huggingFace.show {
+    display: none;
+}

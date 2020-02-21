@@ -1,0 +1,102 @@
+----- Seu Start em Programação -----
+    A aplicação desenvolvida nesse curso se chamará DOE e será um cadastro de doadores de sangue.
+
+
+    As tecnologias Utilizadas nessa aula serão HTML, CSS e JavaScript
+    Hypertext Tranfer Protocol (HTTP)
+    Utiliza URL
+    Feito através de troca de dados
+    
+    A linha <!DOCTYPE html> indica que esse documento é um HTML na versão 5
+
+
+    HTML
+    HYPERTEXT
+    Texto que vai conter links para outros documentos
+
+    MARKUP
+    Texto que contém marcações, chamadas <tags>
+
+    LANGUAGE
+    Para comunicação, o mesmo que sintaxe
+
+    CSS
+    CASCADING STYLESHEET
+    Folha de estilo em cascata
+
+     Emate
+    A linha <!DOCTYPE html> indica que esse documento é um HTML na versão 5
+
+    A extensão Live Server permite que a plicação seja desenvolvida e atualizada no navegador automaticamente
+    ctrl + b para abrir ou fechar o menu lateral.
+
+    <header>Conteúdo Central</header>
+    <section>Formulário</section>
+    <main>Conteúdo Central</main>
+    <footer>Rodapé</footer>
+
+
+    Para usar a extensão emojis use ctrl+shift+I
+
+    Usamos a extensão Live Server para subir um servidor a partir do vscode.
+
+
+----- Finalizando o app -----
+    Criação do Back-end
+        O back-end é o servidor da aplicação. Ele tem como responsabilidade, tratar
+        as regras de negócio da nossa aplicação.
+
+        As tecnologias Utilizadas nessa aula serão: 
+            node.js(JavaScript)
+            postgreSQL (SQL)
+
+        Sobre o NODE.JS:
+            O node é um interpretador de JavaScript. Sem ele, não seria possível
+            rodar aplicações em JavaScript fora dos navegadores.
+
+        Sobre o npm:
+            O npm é um packge manager. É basicamente um gerenciador de pacotes, ou
+            dependencias. Ele ajuda na criação de projetos pois disponibiliza várias
+            funcionalidades pré instaladas.
+
+        
+        Para iniciar um projeto use: 
+            $ npm init -y
+        
+        Instalaremos a dependência express a partir do comando:
+        
+            $ npm install express 
+                // Uma pasta node_modules será criada com alguns arquivos necessários.
+
+        Criado o arquivo server.js
+
+        Sobre o nodemon:
+            O nodemon serve para monitorar alterações no nosso script e toda vez que uma alteração
+            for feita, ele automaticamente irá reiniciar o servidor.
+                Para instalar o nodemon use:
+            
+                    $ npm install nodemon
+                        // Após instalado adicione a linha:
+                        "start": "nodemon server.js" dentro do script packge.json
+
+        Sobre o nunjucks:
+            Permite usar variáveis e outras funcionalidades no index.html.
+            É uma template engine usada para criar templates de aplicações.
+                Para instalar use:
+                    
+                    $ npm install nunjucks
+
+        Banco de dados:
+            Usaremos o POSTGRES:
+                postgre é um sistema gerenciador de Banco de dados relacional.
+                Open Source
+                Gratuito
+
+            O banco já está instalado:
+                psql -Upostgres -hlocalhost
+                senha é: postgres
+                    https://www.youtube.com/watch?v=pqDNOGOcUks
+            Inicialmente temos que instalar o POSTGRES e o Postbird
+
+            Instalar a dependencia para conectar ao banco de dados com:
+                $ npm install pg
